@@ -17,7 +17,7 @@ var divide = document.getElementById('divide ');
 var multiply = document.getElementById('multiply');
 var equals = document.getElementById('equals');
 var clean = document.getElementById('clear');
-var delet = document.getElementById('delete');
+var dele = document.getElementById('delete');
 
 
 one.onmousedown = () => displayNum('1');
@@ -31,6 +31,7 @@ eight.onmousedown = () => displayNum('8');
 nine.onmousedown = () => displayNum('9');
 
 clean.onmousedown = () => clear();
+dele.onmousedown = () => delet();
 
 function displayNum(number) {
     var input = document.getElementById('input');
@@ -41,6 +42,11 @@ function displayNum(number) {
 function clear() {
     displayValue ='';
     input.innerHTML = ` ${displayValue}`;
+}
+
+function delet() {
+    displayValue = displayValue.substring(0, displayValue.length - 1);
+    input.innerHTML = `${displayValue}`;
 }
 
 function add(a,b) {
