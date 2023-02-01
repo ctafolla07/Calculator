@@ -32,6 +32,9 @@ body {
     height: 135px;
 }
 
+#smol {
+    min-height: 32px;
+}
 .row {
     display: flex;
     gap:10px;
